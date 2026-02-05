@@ -38,7 +38,7 @@ class Program
         }
         static int Square(int fnum)
         {
-            int squar = fnum^2;
+            int squar = fnum*fnum;
             return squar;
         }
         static void ResultBaby(string name, int squar, int year)
