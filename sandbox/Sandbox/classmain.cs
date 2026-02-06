@@ -1,4 +1,5 @@
 using System;
+using SodFarm;
 //A class is a type of container for variables AND functions
 //So just btw
 //Public static void Main() is the entrypoint to all of your programming.
@@ -24,7 +25,11 @@ public class Program
         //Console.WriteLine(m1.GetMessage());
         //m2.Ddisplay();
 
-        Car myCar = new Car();
-        myCar.Run();
+        //This is for the car
+        //Car myCar = new Car();
+        //myCar.Run();
+
+        PlotManager dingus = new PlotManager();
+        dingus.Run();
     }
 }
