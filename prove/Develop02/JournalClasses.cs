@@ -5,11 +5,11 @@ using System.Xml.Linq;
 
 public class Journal
 {
-    public List<string> memory = new List<string>();
-    public bool running = true;
+    public List<string> _memory = new List<string>();
+    public bool _running = true;
     public void Run()
     {
-        while (running == true)
+        while (_running == true)
         {
             PrintMenu();
             Console.Write("\nSelect an option 1 through 5.\n");
@@ -20,31 +20,31 @@ public class Journal
             {
                 Console.Write("What is today's date?\n");
                 string date = Console.ReadLine();
-                string prom = prompt();
+                string prom = Prompt();
                 Console.WriteLine(prom);
                 Console.Write(">\n");
-                string test = Console.ReadLine();
-                memory.Add($"{date}\n{prom}\n{test} <|>\n");
+                string entrie = Console.ReadLine();
+                _memory.Add($"{date}\n{prom}\n{entrie} <|>\n");
             }
             else if (selection == 2)
             {
                 Console.WriteLine("\n");
-                foreach (string entry in memory)
+                foreach (string entry in _memory)
                 {
                     Console.WriteLine($"{entry}");
                 }
             }
             else if (selection == 3)
             {
-                File.Saves(memory);
+                File.Saves(_memory);
             }
             else if (selection == 4)
             {
-                memory = File.Loads();
+                _memory = File.Loads();
             }
             else
             {
-                running = false;
+                _running = false;
             }
         }
     }
@@ -59,7 +59,7 @@ public class Journal
         Console.WriteLine("5. Exit Program.");
     }
 
-    public string prompt()
+    public string Prompt()
     {
         List<string> prompts = new List<string>();
         prompts.Add("What was the best interaction you had today?");
@@ -99,9 +99,9 @@ public class File
         
         Console.Write("What file do you want to load from? (include .txt)\n");
         string l_file = Console.ReadLine();
-        string[] idk = System.IO.File.ReadAllLines(l_file);
+        string[] gettext = System.IO.File.ReadAllLines(l_file);
         
-        foreach (string line in idk)
+        foreach (string line in gettext)
         {
             //Console.WriteLine(line);
             loading.Add(line);
