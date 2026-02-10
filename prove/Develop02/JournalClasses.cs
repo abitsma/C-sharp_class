@@ -90,7 +90,7 @@ public class File
                 outputFile.WriteLine(entry);
             }
         }
-        Console.WriteLine($"File saved to {Path.GetFullPath(filename)}");
+        Console.WriteLine($"File saved to {Path.GetFullPath(filename)}.");
     }
 
     public static List<string> Loads()
