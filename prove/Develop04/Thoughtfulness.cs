@@ -2,7 +2,7 @@ using System.ComponentModel.Design;
 
 public class Thoughtfulness : Activity
 {
-    List<string> _focus = new List<string>();
+    private List<string> _focus = new List<string>();
     public Thoughtfulness()
     {
         _name = "Thoughtfulness";
