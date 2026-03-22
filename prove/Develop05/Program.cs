@@ -8,13 +8,13 @@ class Program
     {
         List<Goal> memory = new List<Goal>();
         Points pointmem = new Points();
-        int _totalpoint;
-        bool _quit = false;
-        while (_quit == false)
+        int totalpoint;
+        bool quit = false;
+        while (quit == false)
         {
-            _totalpoint = pointmem.GetPoints();
+            totalpoint = pointmem.GetPoints();
             Console.Clear();
-            Console.WriteLine($"You have {_totalpoint} points.");
+            Console.WriteLine($"You have {totalpoint} points.");
             Console.WriteLine();
             Console.WriteLine("Menu Options:");
             Console.WriteLine(" 1. Create New Goal");
@@ -193,7 +193,7 @@ class Program
 
             else if (choice == "3")
             {
-                File.Save(_totalpoint, memory);
+                File.Save(totalpoint, memory);
                 Console.WriteLine("Goals saved!");
                 Console.Write("Press enter when you are ready to move to the next menu. ");
                 Console.ReadLine();
@@ -279,7 +279,7 @@ class Program
 
             else if (choice == "6")
             {
-                _quit = true;
+                quit = true;
             }
             
             else
