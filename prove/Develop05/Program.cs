@@ -243,7 +243,7 @@ class Program
                     } 
                     goalchoice--;
                     bool iscomplete = memory[goalchoice].IsComplete();
-                    if (iscomplete == false)
+                    if (iscomplete == false) 
                     {
                         bool checka = false;
                         while (checka == false)
