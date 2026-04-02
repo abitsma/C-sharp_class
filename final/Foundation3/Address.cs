@@ -13,21 +13,9 @@ public class Address
         _country = country;
     }
 
-    public bool GetUS()
-    {
-        if (_country == "USA" || _country == "US" || _country == "United States of America")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public string FullAddress()
     {
-        string addy = $"{_street}\n{_city}\n{_stateOrOther}\n{_country}";
+        string addy = $"{_street}, {_city}, {_stateOrOther}, {_country}";
         return addy;
     }
 }
