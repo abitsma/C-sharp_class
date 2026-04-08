@@ -14,22 +14,12 @@ public class Order
         if (_customer.GetUS() == true)
         {
             int ordercost = 5;
-            foreach (Product product in _products)
-            {
-                ordercost = ordercost + product.ProductCost();
-            }
-            Console.WriteLine();
-            Console.WriteLine($"The total Order costs ${ordercost}.");
+            CodeSaver(ordercost);
         }
         else
         {
             int ordercost = 35;
-            foreach (Product product in _products)
-            {
-                ordercost = ordercost + product.ProductCost();
-            }
-            Console.WriteLine();
-            Console.WriteLine($"The total order costs ${ordercost}.");
+            CodeSaver(ordercost);
         }
     }
 
@@ -50,5 +40,15 @@ public class Order
         Console.WriteLine();
         Console.WriteLine(_customer.GetName());
         Console.WriteLine(_customer.GetAddress());
+    }
+
+    private void CodeSaver(int ordercost)
+    {
+        foreach (Product product in _products)
+            {
+                ordercost = ordercost + product.ProductCost();
+            }
+            Console.WriteLine();
+            Console.WriteLine($"The total Order costs ${ordercost}.");
     }
 }
