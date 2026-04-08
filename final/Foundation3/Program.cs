@@ -19,7 +19,7 @@ class Program
 
         foreach (Event thing in lista)
         {
-            Console.WriteLine(thing.StandardDetails());
+            thing.StandardDetails();
             Console.WriteLine();
             Console.WriteLine(thing.FullDetails());
             Console.WriteLine();

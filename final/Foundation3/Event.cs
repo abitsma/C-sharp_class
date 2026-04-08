@@ -15,10 +15,10 @@ public abstract class Event
         _address = addy;
     }
 
-    public string StandardDetails()
+    public void StandardDetails()
     {
         string addy = _address.FullAddress();
-        return $"You won't want to miss: {_title}, on {_date}!\nIt's {_description}.\nWant to come? It's being held at {addy} at {_time}!\nSee you there!";
+        Console.WriteLine($"You won't want to miss: {_title}, on {_date}!\nIt's {_description}.\nWant to come? It's being held at {addy} at {_time}!\nSee you there!");
     }
 
     public abstract string FullDetails();
